@@ -16,7 +16,7 @@ interface IModalProps {
   children?: React.ReactNode
 }
 
-const Modal: React.FC<IModalProps> = ({
+export const Modal: React.FC<IModalProps> = ({
   title,
   description,
   isOpen,
@@ -41,5 +41,3 @@ const Modal: React.FC<IModalProps> = ({
     </Dialog>
   )
 }
-
-export default Modal
