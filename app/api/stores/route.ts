@@ -6,9 +6,10 @@ import prismadb from '@/libs/prismadb'
 export async function POST(req: Request) {
   try {
     const { userId } = auth()
-    const body = req.json()
+    const body = await req.json()
 
     const { name } = body as { name?: string }
+
     if (!userId) {
       return new NextResponse('Unauthorized', { status: 401 })
     }
