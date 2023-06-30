@@ -3,6 +3,8 @@ import { redirect } from 'next/navigation'
 
 import prismadb from '@/libs/prismadb'
 
+import Navbar from '@components/Navbar'
+
 export default async function DashboardLayout({
   children,
   params
@@ -28,7 +30,7 @@ export default async function DashboardLayout({
 
   return (
     <>
-      <div>Navbar</div>
+      <Navbar />
       {children}
     </>
   )

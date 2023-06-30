@@ -2,7 +2,13 @@
 const fs = require('fs')
 
 module.exports = {
-  extends: ['next', 'prettier', 'react-app', 'plugin:@typescript-eslint/recommended', 'plugin:tailwindcss/recommended'],
+  extends: [
+    'next',
+    'prettier',
+    'react-app',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:tailwindcss/recommended'
+  ],
   parserOptions: {
     babelOptions: {
       presets: [require.resolve('next/babel')]
@@ -29,7 +35,14 @@ module.exports = {
     'import/order': [
       1,
       {
-        groups: ['external', 'builtin', 'internal', 'sibling', 'parent', 'index'],
+        groups: [
+          'external',
+          'builtin',
+          'internal',
+          'sibling',
+          'parent',
+          'index'
+        ],
         pathGroups: [
           ...getDirectoriesToSort().map((singleDir) => ({
             pattern: `${singleDir}/**`,
@@ -61,7 +74,9 @@ module.exports = {
 
 function getDirectoriesToSort() {
   const ignoredSortingDirectories = ['.git', '.next', '.vscode', 'node_modules']
-  return getDirectories(process.cwd()).filter((f) => !ignoredSortingDirectories.includes(f))
+  return getDirectories(process.cwd()).filter(
+    (f) => !ignoredSortingDirectories.includes(f)
+  )
 }
 
 function getDirectories(path) {
