@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 
 import prismadb from '@/libs/prismadb'
 
-import SettingsForm from '@components/forms/settings-form'
+import SettingsForm from '@features/SettingsPage/settings-form'
 
 interface ISettingsPageProps {
   params: {

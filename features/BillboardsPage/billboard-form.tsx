@@ -87,7 +87,7 @@ const BillboardForm: React.FC<IBillboardFormProps> = ({ initialData }) => {
       )
 
       router.refresh()
-      router.push('/')
+      router.push(`/${params.storeId}/billboards`)
       toast.success('Billboard deleted.')
     } catch (error) {
       toast.error(
@@ -168,7 +168,6 @@ const BillboardForm: React.FC<IBillboardFormProps> = ({ initialData }) => {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   )
 }
